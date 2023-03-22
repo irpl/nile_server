@@ -46,7 +46,6 @@ def remove(connection):
   if connection in list_of_clients:
     list_of_clients.remove(connection)
 
-print("ready") 
 while True:
   conn, addr = server.accept()
 
