@@ -20,6 +20,7 @@ def clientthread(conn, addr):
     try:
       message = conn.recv(2048)
       if message:
+        print(message.decode())
         conn.sendall(message)
         # print (message)
         # message_to_send = message
