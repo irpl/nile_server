@@ -1,12 +1,13 @@
 # Python program to implement server side of chat room.
+import os
 import socket
 from _thread import *
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
   
-HOST = ""
-PORT = 65432
+HOST = os.getenv("HOST")
+PORT = int(os.getenv("PORT"))
  
 server.bind((HOST, PORT))
 server.listen(5)
