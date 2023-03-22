@@ -6,7 +6,7 @@ from _thread import *
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
   
-HOST = os.getenv("HOST")
+HOST = ""
 PORT = int(os.getenv("PORT"))
  
 server.bind((HOST, PORT))
